@@ -18,3 +18,23 @@ export class AddNoteToBudgetCommand {
     public readonly note: Notes
   ) {}
 }
+
+/**
+ * Result returned after successfully adding a note to a budget
+ */
+export interface AddNoteToBudgetResult {
+  /**
+   * The created note with its ID
+   */
+  note: Notes;
+
+  /**
+   * Success status
+   */
+  success: boolean;
+
+  /**
+   * Optional message for additional context
+   */
+  message?: string;
+}
