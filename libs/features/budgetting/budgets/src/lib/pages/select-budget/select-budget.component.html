@@ -18,7 +18,8 @@
     </div>
 
     <div class="table-container">
-      <app-budget-table [budgets$]="allBudgets$"></app-budget-table>
+      <!-- Pass signal to child component (Angular 16+ signal input) -->
+      <app-budget-table [budgets$]="allBudgets()"></app-budget-table>
     </div>
   </div>
 </app-page>
